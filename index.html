@@ -67,22 +67,22 @@
     </div>
 
     <!-- edit page -->
-    <div class="container_fluid h-100 d-none" id="editPage">
+    <div class="container_fluid vh-100 d-none " id="editPage">
       
-      <!-- resize menu -->
-      <div class="overflow-x-scroll align-self-stretch d-flex flex-row">
-        <div class="btn rounded-pill bg-opacity-50 bg-secondary d-flex flex-row align-items-center mx-2">
-          <svg xmlns="http://www.w3.org/2000/svg" id="resizeBtn" width="50" height="50" fill="currentColor" class="bi bi-aspect-ratio mx-2" viewBox="0 0 16 16">
+      <div class="align-self-stretch overflow-x-auto d-flex flex-row my-2 z-1 h-20">
+        <!-- resize menu -->
+        <div class="btn rounded-pill bg-opacity-50 bg-secondary d-flex flex-row align-items-center mx-3">
+          <svg xmlns="http://www.w3.org/2000/svg" id="resizeBtn" width="50" height="50" fill="currentColor" class="bi bi-pip mx-4" viewBox="0 0 16 16">
             <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5z"/>
-            <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0z"/>
+            <path d="M8 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5z"/>
           </svg>
-          <div class="d-none align-items-center mx-5" id="resizeMenu">
-              <div class="input-group mx-2">
+          <div class="d-none align-items-center mx-3" id="resizeMenu">
+              <div class="input-group mx-1">
                 <span class="input-group-text">width</span>
                 <input type="number" class="form-control" min="1" name="width" id="resizeWidthInput">
                 <span class="input-group-text">px</span>
               </div>
-              <div class="input-group mx-2">
+              <div class="input-group mx-1">
                 <span class="input-group-text">height</span>
                 <input type="number" class="form-control" min="1" name="height" id="resizeHeightInput">
                 <span class="input-group-text">px</span>
@@ -92,8 +92,8 @@
         </div>
         
         <!-- rotate menu -->
-        <div class="btn rounded-pill bg-opacity-50 bg-secondary d-flex flex-row align-items-center mx-2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" id="rotateBtn" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+        <div class="btn rounded-pill bg-opacity-50 bg-secondary d-flex flex-row align-items-center mx-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" id="rotateBtn" fill="currentColor" class="bi bi-arrow-repeat mx-4" viewBox="0 0 16 16">
             <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9"/>
             <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z"/>
           </svg>
@@ -112,38 +112,57 @@
               </div>
           </div>
         </div>  
+        
+        <!-- filter menu -->
+        <div class="btn rounded-pill bg-opacity-50 bg-secondary d-flex flex-row align-items-center mx-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" id="filterBtn" fill="currentColor" class="bi bi-stars mx-4" viewBox="0 0 16 16">
+            <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+          </svg>
+          <div class="d-none align-items-center mx-2 rounded-pill" id="filterMenu">
+              <input type="radio" class="btn-check" id="resetFilter" name="filter" autocomplete="off" onclick="resetFilter()" checked>
+              <label class="btn btn-outline-light rounded-pill mx-1" for="resetFilter">Reset</label>
+              <input type="radio" class="btn-check" id="bw" name="filter" autocomplete="off" onclick="bw()">
+              <label class="btn btn-outline-light rounded-pill mx-1" for="bw">B/W</label>
+              <input type="radio" class="btn-check" id="grayscale" name="filter" autocomplete="off" onclick="grayscale()">
+              <label class="btn btn-outline-light rounded-pill mx-1" for="grayscale">Grayscale</label>
+              <input type="radio" class="btn-check" id="vintage" name="filter" autocomplete="off" onclick="vintage()">
+              <label class="btn btn-outline-light rounded-pill mx-1" for="vintage">Vintage</label>
+              <input type="radio" class="btn-check" id="invert" name="filter" autocomplete="off" onclick="invert()">
+              <label class="btn btn-outline-light rounded-pill mx-1" for="invert">Invert</label>
+          </div>
+        </div>  
          
       </div>
-      <div class="d-flex h-80" style="height: 80%;">
-        <div class="w-25 d-flex flex-column">
+      <div class="d-flex vh-100">
+        <div class="w-25 d-flex flex-column z-1">
+          <!-- zoom -->
           <div class="bg-secondary bg-opacity-50 me-2 rounded-end-pill d-flex flex-row align-items-center justify-content-between my-3">
-            <div class="btn fs-3 rounded-start-pill mx-2 bg-light" id="zoomOut">-</div>
+            <div class="btn fs-3 rounded-start-pill mx-2 bg-light" id="zoomOutBtn">-</div>
             <div class="fs-4  py-3">Zoom : <div id="zoomLabel" class="d-inline">1</div>x </div>
-            <div class="btn fs-3 rounded-end-pill mx-2 bg-light" id="zoomIn">+</div>
+            <div class="btn fs-3 rounded-end-pill mx-2 bg-light" id="zoomInBtn">+</div>
           </div>
+          <!-- extension -->
           <div class="bg-secondary bg-opacity-50 me-2 rounded-end-pill d-flex flex-row align-items-center justify-content-center my-3">
             <div class="fs-4  p-3">Save as</div>
             <div class="col-auto">
               <select class="form-select" id="saveAs">
                 <option selected>.PNG</option>
-                <option value="1">.JPG</option>
-                <option value="2">.</option>
-                <option value="3">Three</option>
+                <option value="JPG">.JPG</option>
               </select>
             </div>
           </div>
             <!-- <div class="px-2"> <hr class="border-tertiary opacity-100 px-1"> </div>  -->
           <div class="flex-grow-1"></div>
-          <div class="btn btn-outline-success border-4 rounded-pill fs-2 m-2" id="saveBtn">Save 
+          <div class="btn btn-outline-success border-4 rounded-pill fs-2 m-2"  id="saveBtn">Save 
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
               <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
               <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
             </svg>
           </div>       
         </div>
-        <div class="w-75 h-100">
-            <canvas class="w-100 h-100 bg-white" id="imgCanvas">
-            </canvas>
+        <div class="w-75 position-relative" id="canvasContainer">
+            <!-- <canvas class="w-100 h-100 bg-secondary bg-opacity-25 zn-1" id="backCanvas"></canvas> -->
+            <canvas class="bg-secondary position-absolute top-50 start-50 translate-middle z-0" id="frontCanvas"></canvas>
         </div>
       </div>
     </div>
